@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Havenza.Core\Havenza.Core.csproj" />
+    <ProjectReference Include="..\Havenza.Shared\Havenza.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

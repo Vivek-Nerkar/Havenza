@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Application", "Havenza.Application\Havenza.Application.csproj", "{3E92F0B3-B407-481C-843F-AA9D8CDA31D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Core", "Havenza.Core\Havenza.Core.csproj", "{1202475D-FD77-420C-8863-D827B10FF2DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Infrastructure", "Havenza.Infrastructure\Havenza.Infrastructure.csproj", "{FD9CD63D-030A-4434-95AA-3D83AA43F12A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Shared", "Havenza.Shared\Havenza.Shared.csproj", "{FBE44ACD-A5DC-4FBF-AD5D-18E8D042FA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Web", "Havenza.Web\Havenza.Web\Havenza.Web.csproj", "{901F730D-729C-49DD-ABF3-294E5A892A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havenza.Web.Client", "Havenza.Web\Havenza.Web.Client\Havenza.Web.Client.csproj", "{98B38C46-7D23-4EC3-B7D8-ABE44BBE6EA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E92F0B3-B407-481C-843F-AA9D8CDA31D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E92F0B3-B407-481C-843F-AA9D8CDA31D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E92F0B3-B407-481C-843F-AA9D8CDA31D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E92F0B3-B407-481C-843F-AA9D8CDA31D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1202475D-FD77-420C-8863-D827B10FF2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1202475D-FD77-420C-8863-D827B10FF2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1202475D-FD77-420C-8863-D827B10FF2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1202475D-FD77-420C-8863-D827B10FF2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9CD63D-030A-4434-95AA-3D83AA43F12A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9CD63D-030A-4434-95AA-3D83AA43F12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9CD63D-030A-4434-95AA-3D83AA43F12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9CD63D-030A-4434-95AA-3D83AA43F12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE44ACD-A5DC-4FBF-AD5D-18E8D042FA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE44ACD-A5DC-4FBF-AD5D-18E8D042FA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE44ACD-A5DC-4FBF-AD5D-18E8D042FA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE44ACD-A5DC-4FBF-AD5D-18E8D042FA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901F730D-729C-49DD-ABF3-294E5A892A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901F730D-729C-49DD-ABF3-294E5A892A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901F730D-729C-49DD-ABF3-294E5A892A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901F730D-729C-49DD-ABF3-294E5A892A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B38C46-7D23-4EC3-B7D8-ABE44BBE6EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B38C46-7D23-4EC3-B7D8-ABE44BBE6EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B38C46-7D23-4EC3-B7D8-ABE44BBE6EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B38C46-7D23-4EC3-B7D8-ABE44BBE6EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF31A556-7023-4E3C-9560-2ECFD6B1A916}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+﻿namespace Havenza.Shared
+{
+    public class Class1
+    {
+
+    }
+}
