@@ -44,7 +44,7 @@ namespace Havenza.Infrastructure
                     Stock = 5,
                     //Rating = 4.8M,
                     Description = "A timeless three-seater sofa with a solid walnut base and linen-blend fabric. Perfect for modern living rooms.",
-                    ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Walnut+Sofa"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/2.png"
                 },
                 new Product
                 {
@@ -55,7 +55,7 @@ namespace Havenza.Infrastructure
                     Stock = 3,
                     //Rating = 4.5M,
                     Description = "Compact 4-seater dining table with a genuine white marble top and sleek black metal legs.",
-                    ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Marble+Table"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/3.png"
                 },
                 new Product
                 {
@@ -66,7 +66,7 @@ namespace Havenza.Infrastructure
                     Stock = 7,
                     //Rating = 4.9M,
                     Description = "Queen-sized bed with a high, tufted headboard, upholstered in a light beige, durable linen fabric.",
-                    ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Linen+Bed"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/4.png"
                 },
                 new Product
                 {
@@ -77,7 +77,7 @@ namespace Havenza.Infrastructure
                     Stock = 12,
                     //Rating = 4.3M,
                     Description = "Simple and robust writing desk with two drawers, designed for a clean and focused workspace.",
-                    ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Office+Desk"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/5.png"
                 },
                 new Product
                 {
@@ -88,7 +88,7 @@ namespace Havenza.Infrastructure
                     Stock = 6,
                     //Rating = 4.6M,
                     Description = "Versatile storage unit with adjustable shelves, finished in a matte dark gray lacquer.",
-                    ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Storage+Cabinet"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/6.png"
                 },
 
                 // 2. DECOR (CategoryId = 2) - 5 Products
@@ -102,7 +102,7 @@ namespace Havenza.Infrastructure
                     Stock = 15,
                     //Rating = 4.7M,
                     Description = "Large, hand-painted abstract canvas piece with muted blue and warm tan tones.",
-                    ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Abstract+Art"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/7.png"
                 },
                 new Product
                 {
@@ -113,7 +113,7 @@ namespace Havenza.Infrastructure
                     Stock = 8,
                     //Rating = 4.6M,
                     Description = "Full-length standing mirror with a thin, brass-finished curved metal frame.",
-                    ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Floor+Mirror"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/8.png"
                 },
                 new Product
                 {
@@ -124,7 +124,7 @@ namespace Havenza.Infrastructure
                     Stock = 20,
                     //Rating = 4.4M,
                     Description = "A collection of five mixed-size frames (3x5, 4x6, 5x7) with natural oak finish and shatter-proof glass. Perfect for creating a gallery wall.",
-                    ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Sculptures"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/9.png"
                 },
                 new Product
                 {
@@ -135,7 +135,7 @@ namespace Havenza.Infrastructure
                     Stock = 18,
                     //Rating = 4.8M,
                     Description = "Silent wall clock featuring an unfinished wood face and simple black hands.",
-                    ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Wood+Clock"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/10.png"
                 },
                 new Product
                 {
@@ -146,7 +146,7 @@ namespace Havenza.Infrastructure
                     Stock = 30,
                     //Rating = 4.5M,
                     Description = "Hand-blown glass vase with a subtle transparent texture, perfect for fresh flowers or as a standalone piece.",
-                    ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Glass+Vase"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/11.png"
                 },
 
                 // --------------------------------------------------------------------------
@@ -161,7 +161,7 @@ namespace Havenza.Infrastructure
                     Stock = 10,
                     //Rating = 4.7M,
                     Description = "Single-bulb ceiling pendant with a matte black metal cage design, adjustable cord length.",
-                    ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Pendant+Light"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/12.png"
                 },
                 new Product
                 {
@@ -172,7 +172,7 @@ namespace Havenza.Infrastructure
                     Stock = 15,
                     //Rating = 4.8M,
                     Description = "A classic table lamp featuring a solid brass base and a soft, white linen drum shade.",
-                    ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Table+Lamp"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/13.png"
                 },
                 new Product
                 {
@@ -183,7 +183,7 @@ namespace Havenza.Infrastructure
                     Stock = 9,
                     //Rating = 4.5M,
                     Description = "Tall, arched floor lamp designed to hang over a sofa or chair for optimal reading light.",
-                    ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Floor+Lamp"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/14.png"
                 },
                 new Product
                 {
@@ -194,7 +194,7 @@ namespace Havenza.Infrastructure
                     Stock = 25,
                     //Rating = 4.3M,
                     Description = "Under-cabinet or shelf-mounted LED light strip for subtle accent illumination.",
-                    ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=LED+Strip"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/15.png"
                 },
                 new Product
                 {
@@ -205,7 +205,7 @@ namespace Havenza.Infrastructure
                     Stock = 4,
                     //Rating = 4.9M,
                     Description = "Elegant chandelier with cascading crystal clusters, perfect for dining rooms or entryways.",
-                    ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Chandelier"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/16.png"
                 },
 
                 // 4. TEXTILES (CategoryId = 4) - 5 Products
@@ -219,7 +219,7 @@ namespace Havenza.Infrastructure
                     Stock = 7,
                     //Rating = 4.8M,
                     Description = "Large area rug made of ethically sourced wool with a subtle geometric pattern in neutral tones.",
-                    ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Wool+Rug"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/17.png"
                 },
                 new Product
                 {
@@ -230,7 +230,7 @@ namespace Havenza.Infrastructure
                     Stock = 22,
                     //Rating = 4.9M,
                     Description = "Ultra-soft acrylic throw blanket with a thick, chunky knit texture, perfect for cozy evenings.",
-                    ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Knit+Throw"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/18.png"
                 },
                 new Product
                 {
@@ -241,7 +241,7 @@ namespace Havenza.Infrastructure
                     Stock = 35,
                     //Rating = 4.5M,
                     Description = "Pair of luxurious velvet cushion covers (18x18 inches) in a deep forest green.",
-                    ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Velvet+Cushions"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/19.png"
                 },
                 new Product
                 {
@@ -252,7 +252,7 @@ namespace Havenza.Infrastructure
                     Stock = 14,
                     //Rating = 4.6M,
                     Description = "Single panel linen curtains with a full blackout lining, 84 inches long.",
-                    ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Linen+Curtains"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/20.png"
                 },
                 new Product
                 {
@@ -263,7 +263,7 @@ namespace Havenza.Infrastructure
                     Stock = 11,
                     //Rating = 4.7M,
                     Description = "Queen size duvet cover and sham set made from ultra-soft 600-thread count Egyptian cotton.",
-                    ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Duvet+Set"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/21.png"
                 },
 
                 // 5. LIVING DECOR (CategoryId = 5) - 5 Products (Plants/Pots Focus)
@@ -277,7 +277,7 @@ namespace Havenza.Infrastructure
                     Stock = 9,
                     //Rating = 4.9M,
                     Description = "A realistic, high-quality faux fiddle-leaf fig tree (6 ft tall), perfect for low-light spaces.",
-                    ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Fiddle+Leaf"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/22.png"
                 },
                 new Product
                 {
@@ -288,7 +288,7 @@ namespace Havenza.Infrastructure
                     Stock = 40,
                     //Rating = 4.6M,
                     Description = "Modern white ceramic planter with a geometric diamond texture, suitable for 6-inch plants.",
-                    ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Planter"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/23.png"
                 },
                 new Product
                 {
@@ -299,7 +299,7 @@ namespace Havenza.Infrastructure
                     Stock = 50,
                     //Rating = 4.5M,
                     Description = "Hand-knotted macrame hanger made from natural cotton rope for small to medium pots.",
-                    ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Macrame"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/24.png"
                 },
                 new Product
                 {
@@ -310,7 +310,7 @@ namespace Havenza.Infrastructure
                     Stock = 18,
                     //Rating = 4.7M,
                     Description = "Low-maintenance succulent gardens in glass terrariums.",
-                    ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Terrariums"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/25.png"
                 },
                 new Product
                 {
@@ -321,7 +321,7 @@ namespace Havenza.Infrastructure
                     Stock = 16,
                     //Rating = 4.4M,
                     Description = "Sleek, black powder-coated metal stand, elevating plants to better catch light.",
-                    ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Plant+Stand"
+                    ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/26.png"
                 }
             );
         }
