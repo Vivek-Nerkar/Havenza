@@ -37,10 +37,10 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    Id = 001,
+                    ProductId = 001,
                     Name = "Mid-Century Walnut Sofa",
                     CategoryId = 1,
-                    Price = 1299.99,
+                    Price = 1299.99m,
                     Stock = 5,
                     //Rating = 4.8M,
                     Description = "A timeless three-seater sofa with a solid walnut base and linen-blend fabric. Perfect for modern living rooms.",
@@ -48,10 +48,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 002,
+                    ProductId = 002,
                     Name = "Round Marble Dining Table",
                     CategoryId = 1,
-                    Price = 749.50,
+                    Price = 749.50m,
                     Stock = 3,
                     //Rating = 4.5M,
                     Description = "Compact 4-seater dining table with a genuine white marble top and sleek black metal legs.",
@@ -59,10 +59,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 003,
+                    ProductId = 003,
                     Name = "Linen Upholstered Bed Frame",
                     CategoryId = 1,
-                    Price = 899.00,
+                    Price = 899.00m,
                     Stock = 7,
                     //Rating = 4.9M,
                     Description = "Queen-sized bed with a high, tufted headboard, upholstered in a light beige, durable linen fabric.",
@@ -70,10 +70,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 004,
+                    ProductId = 004,
                     Name = "Minimalist Office Desk",
                     CategoryId = 1,
-                    Price = 345.99,
+                    Price = 345.99m,
                     Stock = 12,
                     //Rating = 4.3M,
                     Description = "Simple and robust writing desk with two drawers, designed for a clean and focused workspace.",
@@ -81,10 +81,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 005,
+                    ProductId = 005,
                     Name = "Modular Storage Cabinet",
                     CategoryId = 1,
-                    Price = 520.00,
+                    Price = 520.00m,
                     Stock = 6,
                     //Rating = 4.6M,
                     Description = "Versatile storage unit with adjustable shelves, finished in a matte dark gray lacquer.",
@@ -95,10 +95,10 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    Id = 006,
+                    ProductId = 006,
                     Name = "Abstract Canvas Wall Art",
                     CategoryId = 2,
-                    Price = 119.99,
+                    Price = 119.99m,
                     Stock = 15,
                     //Rating = 4.7M,
                     Description = "Large, hand-painted abstract canvas piece with muted blue and warm tan tones.",
@@ -106,10 +106,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 007,
+                    ProductId = 007,
                     Name = "Curved Metal Floor Mirror",
                     CategoryId = 2,
-                    Price = 185.00,
+                    Price = 185.00m,
                     Stock = 8,
                     //Rating = 4.6M,
                     Description = "Full-length standing mirror with a thin, brass-finished curved metal frame.",
@@ -117,10 +117,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 008,
+                    ProductId = 008,
                     Name = "Set of 5 Minimalist Photo Frames",
                     CategoryId = 2,
-                    Price = 45.99,
+                    Price = 45.99m,
                     Stock = 20,
                     //Rating = 4.4M,
                     Description = "A collection of five mixed-size frames (3x5, 4x6, 5x7) with natural oak finish and shatter-proof glass. Perfect for creating a gallery wall.",
@@ -128,10 +128,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 009,
+                    ProductId = 009,
                     Name = "Minimalist Wooden Clock",
                     CategoryId = 2,
-                    Price = 59.50,
+                    Price = 59.50m,
                     Stock = 18,
                     //Rating = 4.8M,
                     Description = "Silent wall clock featuring an unfinished wood face and simple black hands.",
@@ -139,10 +139,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 010,
+                    ProductId = 010,
                     Name = "Transparent Glass Vase",
                     CategoryId = 2,
-                    Price = 35.00,
+                    Price = 35.00m,
                     Stock = 30,
                     //Rating = 4.5M,
                     Description = "Hand-blown glass vase with a subtle transparent texture, perfect for fresh flowers or as a standalone piece.",
@@ -154,10 +154,10 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    Id = 011,
+                    ProductId = 011,
                     Name = "Industrial Black Pendant Light",
                     CategoryId = 3,
-                    Price = 95.00,
+                    Price = 95.00m,
                     Stock = 10,
                     //Rating = 4.7M,
                     Description = "Single-bulb ceiling pendant with a matte black metal cage design, adjustable cord length.",
@@ -165,10 +165,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 012,
+                    ProductId = 012,
                     Name = "Brass & Linen Table Lamp",
                     CategoryId = 3,
-                    Price = 65.99,
+                    Price = 65.99m,
                     Stock = 15,
                     //Rating = 4.8M,
                     Description = "A classic table lamp featuring a solid brass base and a soft, white linen drum shade.",
@@ -176,10 +176,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 013,
+                    ProductId = 013,
                     Name = "Arched Reading Floor Lamp",
                     CategoryId = 3,
-                    Price = 130.00,
+                    Price = 130.00m,
                     Stock = 9,
                     //Rating = 4.5M,
                     Description = "Tall, arched floor lamp designed to hang over a sofa or chair for optimal reading light.",
@@ -187,10 +187,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 014,
+                    ProductId = 014,
                     Name = "Minimalist LED Strip Light",
                     CategoryId = 3,
-                    Price = 45.00,
+                    Price = 45.00m,
                     Stock = 25,
                     //Rating = 4.3M,
                     Description = "Under-cabinet or shelf-mounted LED light strip for subtle accent illumination.",
@@ -198,10 +198,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 015,
+                    ProductId = 015,
                     Name = "Crystal Cluster Chandelier",
                     CategoryId = 3,
-                    Price = 499.99,
+                    Price = 499.99m,
                     Stock = 4,
                     //Rating = 4.9M,
                     Description = "Elegant chandelier with cascading crystal clusters, perfect for dining rooms or entryways.",
@@ -212,10 +212,10 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    Id = 016,
+                    ProductId = 016,
                     Name = "Hand-Woven Wool Rug (8'x10')",
                     CategoryId = 4,
-                    Price = 399.00,
+                    Price = 399.00m,
                     Stock = 7,
                     //Rating = 4.8M,
                     Description = "Large area rug made of ethically sourced wool with a subtle geometric pattern in neutral tones.",
@@ -223,10 +223,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 017,
+                    ProductId = 017,
                     Name = "Chunky Knit Throw Blanket",
                     CategoryId = 4,
-                    Price = 85.00,
+                    Price = 85.00m,
                     Stock = 22,
                     //Rating = 4.9M,
                     Description = "Ultra-soft acrylic throw blanket with a thick, chunky knit texture, perfect for cozy evenings.",
@@ -234,10 +234,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 018,
+                    ProductId = 018,
                     Name = "Set of 2 Velvet Cushion Covers",
                     CategoryId = 4,
-                    Price = 29.99,
+                    Price = 29.99m,
                     Stock = 35,
                     //Rating = 4.5M,
                     Description = "Pair of luxurious velvet cushion covers (18x18 inches) in a deep forest green.",
@@ -245,10 +245,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 019,
+                    ProductId = 019,
                     Name = "Blackout Linen Curtains",
                     CategoryId = 4,
-                    Price = 55.00,
+                    Price = 55.00m,
                     Stock = 14,
                     //Rating = 4.6M,
                     Description = "Single panel linen curtains with a full blackout lining, 84 inches long.",
@@ -256,10 +256,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 020,
+                    ProductId = 020,
                     Name = "Egyptian Cotton Duvet Cover Set",
                     CategoryId = 4,
-                    Price = 110.00,
+                    Price = 110.00m,
                     Stock = 11,
                     //Rating = 4.7M,
                     Description = "Queen size duvet cover and sham set made from ultra-soft 600-thread count Egyptian cotton.",
@@ -270,10 +270,10 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    Id = 021,
+                    ProductId = 021,
                     Name = "Large Fiddle-Leaf Fig (Faux)",
                     CategoryId = 5,
-                    Price = 159.99,
+                    Price = 159.99m,
                     Stock = 9,
                     //Rating = 4.9M,
                     Description = "A realistic, high-quality faux fiddle-leaf fig tree (6 ft tall), perfect for low-light spaces.",
@@ -281,10 +281,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 022,
+                    ProductId = 022,
                     Name = "Geometric Ceramic Planter",
                     CategoryId = 5,
-                    Price = 29.00,
+                    Price = 29.00m,
                     Stock = 40,
                     //Rating = 4.6M,
                     Description = "Modern white ceramic planter with a geometric diamond texture, suitable for 6-inch plants.",
@@ -292,10 +292,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 023,
+                    ProductId = 023,
                     Name = "Hanging Macrame Plant Holder",
                     CategoryId = 5,
-                    Price = 19.50,
+                    Price = 19.50m,
                     Stock = 50,
                     //Rating = 4.5M,
                     Description = "Hand-knotted macrame hanger made from natural cotton rope for small to medium pots.",
@@ -303,10 +303,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 024,
+                    ProductId = 024,
                     Name = "Succulent Terrariums",
                     CategoryId = 5,
-                    Price = 75.00,
+                    Price = 75.00m,
                     Stock = 18,
                     //Rating = 4.7M,
                     Description = "Low-maintenance succulent gardens in glass terrariums.",
@@ -314,10 +314,10 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    Id = 025,
+                    ProductId = 025,
                     Name = "Tall Metal Plant Stand",
                     CategoryId = 5,
-                    Price = 49.99,
+                    Price = 49.99m,
                     Stock = 16,
                     //Rating = 4.4M,
                     Description = "Sleek, black powder-coated metal stand, elevating plants to better catch light.",

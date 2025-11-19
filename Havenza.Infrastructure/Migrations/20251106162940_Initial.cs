@@ -45,13 +45,13 @@ namespace Havenza.Infrastructure.Migrations
                         name: "FK_Products_Categories_CategoryId",
                         column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "Id",
+                        principalColumn: "ProductId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Categories",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "ProductId", "Name" },
                 values: new object[,]
                 {
                     { 1, "Furniture" },
@@ -63,7 +63,7 @@ namespace Havenza.Infrastructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "CategoryId", "Description", "ImageUrl", "Name", "Price", "Stock" },
+                columns: new[] { "ProductId", "CategoryId", "Description", "ImageUrl", "Name", "Price", "Stock" },
                 values: new object[,]
                 {
                     { 1, 1, "A timeless three-seater sofa with a solid walnut base and linen-blend fabric. Perfect for modern living rooms.", "https://placehold.co/600x400/E2A16F/FFF?text=Walnut+Sofa", "Mid-Century Walnut Sofa", 1299.99, 5 },
