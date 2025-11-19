@@ -1,4 +1,5 @@
 HAVENZA
+
 HAVENZA is a modular, full‑stack .NET application designed with scalability, clean architecture, and accessibility in mind. It leverages modern frameworks and best practices to deliver a robust foundation for building enterprise‑grade web applications.
 
 📂 Project Structure
