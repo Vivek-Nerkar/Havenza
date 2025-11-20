@@ -1,3 +1,4 @@
+using Havenza.Infrastructure;
 using Havenza.Web.Client.Pages;
 using Havenza.Web.Components;
 using Havenza.Web.Components.Account;
@@ -25,12 +26,13 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+
+builder.Services.AddDbContext<HavenzaDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddEntityFrameworkStores<HavenzaDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
