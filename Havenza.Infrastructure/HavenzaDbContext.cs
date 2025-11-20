@@ -37,7 +37,7 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    ProductId = 001,
+                    ProductId = 1,
                     Name = "Mid-Century Walnut Sofa",
                     CategoryId = 1,
                     Price = 1299.99m,
@@ -48,7 +48,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 002,
+                    ProductId = 2,
                     Name = "Round Marble Dining Table",
                     CategoryId = 1,
                     Price = 749.50m,
@@ -59,7 +59,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 003,
+                    ProductId = 3,
                     Name = "Linen Upholstered Bed Frame",
                     CategoryId = 1,
                     Price = 899.00m,
@@ -70,7 +70,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 004,
+                    ProductId = 4,
                     Name = "Minimalist Office Desk",
                     CategoryId = 1,
                     Price = 345.99m,
@@ -81,7 +81,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 005,
+                    ProductId = 5,
                     Name = "Modular Storage Cabinet",
                     CategoryId = 1,
                     Price = 520.00m,
@@ -95,7 +95,7 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    ProductId = 006,
+                    ProductId = 6,
                     Name = "Abstract Canvas Wall Art",
                     CategoryId = 2,
                     Price = 119.99m,
@@ -106,7 +106,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 007,
+                    ProductId = 7,
                     Name = "Curved Metal Floor Mirror",
                     CategoryId = 2,
                     Price = 185.00m,
@@ -117,7 +117,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 008,
+                    ProductId = 8,
                     Name = "Set of 5 Minimalist Photo Frames",
                     CategoryId = 2,
                     Price = 45.99m,
@@ -128,7 +128,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 009,
+                    ProductId = 9,
                     Name = "Minimalist Wooden Clock",
                     CategoryId = 2,
                     Price = 59.50m,
@@ -139,7 +139,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 010,
+                    ProductId = 10,
                     Name = "Transparent Glass Vase",
                     CategoryId = 2,
                     Price = 35.00m,
@@ -154,7 +154,7 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    ProductId = 011,
+                    ProductId = 11,
                     Name = "Industrial Black Pendant Light",
                     CategoryId = 3,
                     Price = 95.00m,
@@ -165,7 +165,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 012,
+                    ProductId = 12,
                     Name = "Brass & Linen Table Lamp",
                     CategoryId = 3,
                     Price = 65.99m,
@@ -176,7 +176,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 013,
+                    ProductId = 13,
                     Name = "Arched Reading Floor Lamp",
                     CategoryId = 3,
                     Price = 130.00m,
@@ -187,7 +187,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 014,
+                    ProductId = 14,
                     Name = "Minimalist LED Strip Light",
                     CategoryId = 3,
                     Price = 45.00m,
@@ -198,7 +198,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 015,
+                    ProductId = 15,
                     Name = "Crystal Cluster Chandelier",
                     CategoryId = 3,
                     Price = 499.99m,
@@ -212,7 +212,7 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    ProductId = 016,
+                    ProductId = 16,
                     Name = "Hand-Woven Wool Rug (8'x10')",
                     CategoryId = 4,
                     Price = 399.00m,
@@ -223,7 +223,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 017,
+                    ProductId = 17,
                     Name = "Chunky Knit Throw Blanket",
                     CategoryId = 4,
                     Price = 85.00m,
@@ -234,7 +234,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 018,
+                    ProductId = 18,
                     Name = "Set of 2 Velvet Cushion Covers",
                     CategoryId = 4,
                     Price = 29.99m,
@@ -245,7 +245,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 019,
+                    ProductId = 19,
                     Name = "Blackout Linen Curtains",
                     CategoryId = 4,
                     Price = 55.00m,
@@ -256,7 +256,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 020,
+                    ProductId = 20,
                     Name = "Egyptian Cotton Duvet Cover Set",
                     CategoryId = 4,
                     Price = 110.00m,
@@ -270,7 +270,7 @@ namespace Havenza.Infrastructure
                 // --------------------------------------------------------------------------
                 new Product
                 {
-                    ProductId = 021,
+                    ProductId = 21,
                     Name = "Large Fiddle-Leaf Fig (Faux)",
                     CategoryId = 5,
                     Price = 159.99m,
@@ -281,7 +281,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 022,
+                    ProductId = 22,
                     Name = "Geometric Ceramic Planter",
                     CategoryId = 5,
                     Price = 29.00m,
@@ -292,7 +292,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 023,
+                    ProductId = 23,
                     Name = "Hanging Macrame Plant Holder",
                     CategoryId = 5,
                     Price = 19.50m,
@@ -303,7 +303,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 024,
+                    ProductId = 24,
                     Name = "Succulent Terrariums",
                     CategoryId = 5,
                     Price = 75.00m,
@@ -314,7 +314,7 @@ namespace Havenza.Infrastructure
                 },
                 new Product
                 {
-                    ProductId = 025,
+                    ProductId = 25,
                     Name = "Tall Metal Plant Stand",
                     CategoryId = 5,
                     Price = 49.99m,

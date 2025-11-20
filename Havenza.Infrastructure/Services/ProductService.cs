@@ -2,11 +2,6 @@
 using Havenza.Application.Interfaces;
 using Havenza.Core.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Havenza.Infrastructure.Services
 {
@@ -34,17 +29,14 @@ namespace Havenza.Infrastructure.Services
         }
         public async Task<List<ProductResponse>> GetAllProductsAsync()
         {
-            var products = await _context.Products.Include(p => p.Category).ToListAsync();
+            var products = await _context.Products.Include(p => p.CategoryName).ToListAsync();
             return products.Select(p => MapProductToResponse(p)).ToList();
         }
 
-        public async Task<ProductResponse?> GetProductByIdAsync(int productId)
+        public async Task<ProductResponse?> GetProductByIdAsync(int ProductId)
         {
-            var product = await _context.Products
-                .Include(p => p.Category)
-                .FirstOrDefaultAsync(p => p.ProductId == productId);
+            var product = await _context.Products.Include(p => p.CategoryName).FirstOrDefaultAsync(p => p.ProductId == ProductId);
             return product is null ? null : MapProductToResponse(product);
         }
-
     }
 }

@@ -1,4 +1,6 @@
+using Havenza.Application.Interfaces;
 using Havenza.Infrastructure;
+using Havenza.Infrastructure.Services;
 using Havenza.Web.Client.Pages;
 using Havenza.Web.Components;
 using Havenza.Web.Components.Account;
@@ -8,7 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
+
 // Add services to the container.
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents()
     .AddAuthenticationStateSerialization();
@@ -16,6 +23,9 @@ builder.Services.AddRazorComponents()
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddAuthentication(options =>
     {
@@ -39,6 +49,16 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
 var app = builder.Build();
+
+app.UseRouting();
+
+app.MapControllers(); // <<< this is required for Web API
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+} 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -23,16 +23,16 @@ namespace Havenza.Infrastructure.Migrations
 
             modelBuilder.Entity("Havenza.Core.Entities.Category", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ProductId");
+                    b.HasKey("Id");
 
                     b.ToTable("Categories");
 
@@ -84,8 +84,8 @@ namespace Havenza.Infrastructure.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
@@ -99,265 +99,265 @@ namespace Havenza.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            ProductId = 1,
                             CategoryId = 1,
                             Description = "A timeless three-seater sofa with a solid walnut base and linen-blend fabric. Perfect for modern living rooms.",
-                            ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Walnut+Sofa",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/2.png",
                             Name = "Mid-Century Walnut Sofa",
-                            Price = 1299.99,
+                            Price = 1299.99m,
                             Stock = 5
                         },
                         new
                         {
-                            Id = 2,
+                            ProductId = 2,
                             CategoryId = 1,
                             Description = "Compact 4-seater dining table with a genuine white marble top and sleek black metal legs.",
-                            ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Marble+Table",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/3.png",
                             Name = "Round Marble Dining Table",
-                            Price = 749.5,
+                            Price = 749.50m,
                             Stock = 3
                         },
                         new
                         {
-                            Id = 3,
+                            ProductId = 3,
                             CategoryId = 1,
                             Description = "Queen-sized bed with a high, tufted headboard, upholstered in a light beige, durable linen fabric.",
-                            ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Linen+Bed",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/4.png",
                             Name = "Linen Upholstered Bed Frame",
-                            Price = 899.0,
+                            Price = 899.00m,
                             Stock = 7
                         },
                         new
                         {
-                            Id = 4,
+                            ProductId = 4,
                             CategoryId = 1,
                             Description = "Simple and robust writing desk with two drawers, designed for a clean and focused workspace.",
-                            ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Office+Desk",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/5.png",
                             Name = "Minimalist Office Desk",
-                            Price = 345.99000000000001,
+                            Price = 345.99m,
                             Stock = 12
                         },
                         new
                         {
-                            Id = 5,
+                            ProductId = 5,
                             CategoryId = 1,
                             Description = "Versatile storage unit with adjustable shelves, finished in a matte dark gray lacquer.",
-                            ImageUrl = "https://placehold.co/600x400/E2A16F/FFF?text=Storage+Cabinet",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/6.png",
                             Name = "Modular Storage Cabinet",
-                            Price = 520.0,
+                            Price = 520.00m,
                             Stock = 6
                         },
                         new
                         {
-                            Id = 6,
+                            ProductId = 6,
                             CategoryId = 2,
                             Description = "Large, hand-painted abstract canvas piece with muted blue and warm tan tones.",
-                            ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Abstract+Art",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/7.png",
                             Name = "Abstract Canvas Wall Art",
-                            Price = 119.98999999999999,
+                            Price = 119.99m,
                             Stock = 15
                         },
                         new
                         {
-                            Id = 7,
+                            ProductId = 7,
                             CategoryId = 2,
                             Description = "Full-length standing mirror with a thin, brass-finished curved metal frame.",
-                            ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Floor+Mirror",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/8.png",
                             Name = "Curved Metal Floor Mirror",
-                            Price = 185.0,
+                            Price = 185.00m,
                             Stock = 8
                         },
                         new
                         {
-                            Id = 8,
+                            ProductId = 8,
                             CategoryId = 2,
                             Description = "A collection of five mixed-size frames (3x5, 4x6, 5x7) with natural oak finish and shatter-proof glass. Perfect for creating a gallery wall.",
-                            ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Sculptures",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/9.png",
                             Name = "Set of 5 Minimalist Photo Frames",
-                            Price = 45.990000000000002,
+                            Price = 45.99m,
                             Stock = 20
                         },
                         new
                         {
-                            Id = 9,
+                            ProductId = 9,
                             CategoryId = 2,
                             Description = "Silent wall clock featuring an unfinished wood face and simple black hands.",
-                            ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Wood+Clock",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/10.png",
                             Name = "Minimalist Wooden Clock",
-                            Price = 59.5,
+                            Price = 59.50m,
                             Stock = 18
                         },
                         new
                         {
-                            Id = 10,
+                            ProductId = 10,
                             CategoryId = 2,
                             Description = "Hand-blown glass vase with a subtle transparent texture, perfect for fresh flowers or as a standalone piece.",
-                            ImageUrl = "https://placehold.co/600x400/86B0BD/FFF?text=Glass+Vase",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/11.png",
                             Name = "Transparent Glass Vase",
-                            Price = 35.0,
+                            Price = 35.00m,
                             Stock = 30
                         },
                         new
                         {
-                            Id = 11,
+                            ProductId = 11,
                             CategoryId = 3,
                             Description = "Single-bulb ceiling pendant with a matte black metal cage design, adjustable cord length.",
-                            ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Pendant+Light",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/12.png",
                             Name = "Industrial Black Pendant Light",
-                            Price = 95.0,
+                            Price = 95.00m,
                             Stock = 10
                         },
                         new
                         {
-                            Id = 12,
+                            ProductId = 12,
                             CategoryId = 3,
                             Description = "A classic table lamp featuring a solid brass base and a soft, white linen drum shade.",
-                            ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Table+Lamp",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/13.png",
                             Name = "Brass & Linen Table Lamp",
-                            Price = 65.989999999999995,
+                            Price = 65.99m,
                             Stock = 15
                         },
                         new
                         {
-                            Id = 13,
+                            ProductId = 13,
                             CategoryId = 3,
                             Description = "Tall, arched floor lamp designed to hang over a sofa or chair for optimal reading light.",
-                            ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Floor+Lamp",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/14.png",
                             Name = "Arched Reading Floor Lamp",
-                            Price = 130.0,
+                            Price = 130.00m,
                             Stock = 9
                         },
                         new
                         {
-                            Id = 14,
+                            ProductId = 14,
                             CategoryId = 3,
                             Description = "Under-cabinet or shelf-mounted LED light strip for subtle accent illumination.",
-                            ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=LED+Strip",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/15.png",
                             Name = "Minimalist LED Strip Light",
-                            Price = 45.0,
+                            Price = 45.00m,
                             Stock = 25
                         },
                         new
                         {
-                            Id = 15,
+                            ProductId = 15,
                             CategoryId = 3,
                             Description = "Elegant chandelier with cascading crystal clusters, perfect for dining rooms or entryways.",
-                            ImageUrl = "https://placehold.co/600x400/2C2C2C/FFF?text=Chandelier",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/16.png",
                             Name = "Crystal Cluster Chandelier",
-                            Price = 499.99000000000001,
+                            Price = 499.99m,
                             Stock = 4
                         },
                         new
                         {
-                            Id = 16,
+                            ProductId = 16,
                             CategoryId = 4,
                             Description = "Large area rug made of ethically sourced wool with a subtle geometric pattern in neutral tones.",
-                            ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Wool+Rug",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/17.png",
                             Name = "Hand-Woven Wool Rug (8'x10')",
-                            Price = 399.0,
+                            Price = 399.00m,
                             Stock = 7
                         },
                         new
                         {
-                            Id = 17,
+                            ProductId = 17,
                             CategoryId = 4,
                             Description = "Ultra-soft acrylic throw blanket with a thick, chunky knit texture, perfect for cozy evenings.",
-                            ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Knit+Throw",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/18.png",
                             Name = "Chunky Knit Throw Blanket",
-                            Price = 85.0,
+                            Price = 85.00m,
                             Stock = 22
                         },
                         new
                         {
-                            Id = 18,
+                            ProductId = 18,
                             CategoryId = 4,
                             Description = "Pair of luxurious velvet cushion covers (18x18 inches) in a deep forest green.",
-                            ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Velvet+Cushions",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/19.png",
                             Name = "Set of 2 Velvet Cushion Covers",
-                            Price = 29.989999999999998,
+                            Price = 29.99m,
                             Stock = 35
                         },
                         new
                         {
-                            Id = 19,
+                            ProductId = 19,
                             CategoryId = 4,
                             Description = "Single panel linen curtains with a full blackout lining, 84 inches long.",
-                            ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Linen+Curtains",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/20.png",
                             Name = "Blackout Linen Curtains",
-                            Price = 55.0,
+                            Price = 55.00m,
                             Stock = 14
                         },
                         new
                         {
-                            Id = 20,
+                            ProductId = 20,
                             CategoryId = 4,
                             Description = "Queen size duvet cover and sham set made from ultra-soft 600-thread count Egyptian cotton.",
-                            ImageUrl = "https://placehold.co/600x400/FFF0DD/2C2C2C?text=Duvet+Set",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/21.png",
                             Name = "Egyptian Cotton Duvet Cover Set",
-                            Price = 110.0,
+                            Price = 110.00m,
                             Stock = 11
                         },
                         new
                         {
-                            Id = 21,
+                            ProductId = 21,
                             CategoryId = 5,
                             Description = "A realistic, high-quality faux fiddle-leaf fig tree (6 ft tall), perfect for low-light spaces.",
-                            ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Fiddle+Leaf",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/22.png",
                             Name = "Large Fiddle-Leaf Fig (Faux)",
-                            Price = 159.99000000000001,
+                            Price = 159.99m,
                             Stock = 9
                         },
                         new
                         {
-                            Id = 22,
+                            ProductId = 22,
                             CategoryId = 5,
                             Description = "Modern white ceramic planter with a geometric diamond texture, suitable for 6-inch plants.",
-                            ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Planter",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/23.png",
                             Name = "Geometric Ceramic Planter",
-                            Price = 29.0,
+                            Price = 29.00m,
                             Stock = 40
                         },
                         new
                         {
-                            Id = 23,
+                            ProductId = 23,
                             CategoryId = 5,
                             Description = "Hand-knotted macrame hanger made from natural cotton rope for small to medium pots.",
-                            ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Macrame",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/24.png",
                             Name = "Hanging Macrame Plant Holder",
-                            Price = 19.5,
+                            Price = 19.50m,
                             Stock = 50
                         },
                         new
                         {
-                            Id = 24,
+                            ProductId = 24,
                             CategoryId = 5,
                             Description = "Low-maintenance succulent gardens in glass terrariums.",
-                            ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Terrariums",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/25.png",
                             Name = "Succulent Terrariums",
-                            Price = 75.0,
+                            Price = 75.00m,
                             Stock = 18
                         },
                         new
                         {
-                            Id = 25,
+                            ProductId = 25,
                             CategoryId = 5,
                             Description = "Sleek, black powder-coated metal stand, elevating plants to better catch light.",
-                            ImageUrl = "https://placehold.co/600x400/D1D3D4/2C2C2C?text=Plant+Stand",
+                            ImageUrl = "Havenza.Web/Havenza.Web/wwwroot/images/products/26.png",
                             Name = "Tall Metal Plant Stand",
-                            Price = 49.990000000000002,
+                            Price = 49.99m,
                             Stock = 16
                         });
                 });
 
             modelBuilder.Entity("Havenza.Core.Entities.Product", b =>
                 {
-                    b.HasOne("Havenza.Core.Entities.Category", "Category")
+                    b.HasOne("Havenza.Core.Entities.Category", "CategoryName")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("CategoryName");
                 });
 
             modelBuilder.Entity("Havenza.Core.Entities.Category", b =>

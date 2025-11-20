@@ -19,7 +19,7 @@ namespace Havenza.Core.Entities
 
         // Navigation property for the product's category
         // This creates a relationship to the Category entity
-        public Category? Category { get; set; }
+        public Category? CategoryName { get; set; }
         public string? ImageUrl { get; set; }         // URL/path to the product image
         public int Stock { get; set; }
 
