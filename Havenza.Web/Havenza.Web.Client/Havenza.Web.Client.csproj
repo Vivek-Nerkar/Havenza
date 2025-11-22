@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Havenza.Core\Havenza.Core.csproj" />
     <ProjectReference Include="..\..\Havenza.Shared\Havenza.Shared.csproj" />
   </ItemGroup>
 

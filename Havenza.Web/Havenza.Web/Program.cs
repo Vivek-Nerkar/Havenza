@@ -7,6 +7,7 @@ using Havenza.Web.Components.Account;
 using Havenza.Web.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Havenza.Web.Client.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,7 +53,7 @@ var app = builder.Build();
 
 app.UseRouting();
 
-app.MapControllers(); // <<< this is required for Web API
+app.MapControllers(); 
 
 if (app.Environment.IsDevelopment())
 {

@@ -1,0 +1,129 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Havenza.Core.Entities
+@inject CategoriesService categoriesService
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <!-- Logo/Home -->
+        <a class="navbar-brand" href="/">
+            <img src="/images/products/1.png" alt="HAVENZA" style="width:20%;" />
+        </a>
+
+        <!-- Toggler for mobile -->
+        <!-- In your NavMenu.razor or main layout component -->
+
+        <button class="navbar-toggler" type="button" @onclick="ToggleSidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        @if (sidebarOpen)
+        {
+            <div class="sidebar-overlay" @onclick="CloseSidebar"></div>
+            <div class="sidebar">
+                <form class="sidebar-search mb-3">
+                    <input type="search" placeholder="Search..." />
+                </form>
+                <ul>
+                    <li><NavLink href="/categories">Categories</NavLink></li>
+                    <li><NavLink href="/shop">Shop</NavLink></li>
+                    <li><NavLink href="/library">Library</NavLink></li>
+                    <li><NavLink href="/aboutcontact">About Us</NavLink></li>
+                </ul>
+                <!-- Auth/cart logic as needed -->
+            </div>
+        }
+
+        <!-- Main Navigation -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Categories Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                        @foreach (var cat in categories)
+                        {
+                            <li><NavLink class="dropdown-item" href="@($"/categories/{cat.Id}")">@cat.Name</NavLink></li>
+                        }
+                    </ul>
+                </li>
+                <!-- Shop -->
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/shop">Shop</NavLink>
+                </li>
+                <!-- Library Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="libraryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Library
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="libraryDropdown">
+                        <li><a class="dropdown-item" href="/blogs">Blogs</a></li>
+                        <li><a class="dropdown-item" href="/stories">Stories</a></li>
+                    </ul>
+                </li>
+                <!-- About -->
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="/aboutcontact">About Us</NavLink>
+                </li>
+            </ul>
+
+            <!-- Search + Auth/Cart Section (right aligned) -->
+            <form class="d-flex me-2 position-relative" role="search" @onfocusin="ExpandSearch" @onfocusout="CollapseSearch">
+                <input class="form-control me-2 search-box"
+                       type="search"
+                       placeholder="Search..."
+                       aria-label="Search"
+                       style="@_searchExpanded ? " width: 220px;" : "width: 120px; transition:width 0.25s;" ">
+                <button class="btn btn-outline-secondary" type="submit">
+                    <span class="bi bi-search"></span>
+                </button>
+            </form>
+            <!-- User/Auth, Cart -->
+            <div class="d-flex align-items-center">
+                <AuthorizeView>
+                    <Authorized>
+                        <NavLink class="nav-link" href="/account/manage">
+                            <span class="bi bi-person-circle"></span>
+                        </NavLink>
+                        <NavLink class="nav-link" href="/cart">
+                            <span class="bi bi-cart"></span>
+                        </NavLink>
+                        <form method="post" action="/account/logout" class="d-inline">
+                            <button type="submit" class="btn btn-link nav-link">
+                                Logout
+                            </button>
+                        </form>
+                    </Authorized>
+                    <NotAuthorized>
+                        <NavLink class="nav-link" href="/account/register">Register</NavLink>
+                        <NavLink class="nav-link" href="/account/login">
+                            <span class="bi bi-person"></span> Login
+                        </NavLink>
+                        <NavLink class="nav-link" href="/cart">
+                            <span class="bi bi-cart"></span>
+                        </NavLink>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool sidebarOpen = false;
+    void ToggleSidebar() => sidebarOpen = !sidebarOpen;
+    void CloseSidebar() => sidebarOpen = false;
+    private bool _searchExpanded = false;
+
+    void ExpandSearch() => _searchExpanded = true;
+    void CollapseSearch() => _searchExpanded = false;
+
+    private IEnumerable<Category> categories;
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = await categoriesService.GetCategoriesAsync();
+    }
+}
