@@ -1,19 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 @using Havenza.Web.Client.Models
-@inject CategoriesService categoriesService
-
+@using MudBlazor
+@inject CategoriesService CategoriesService
+@inject NavigationManager Navigation
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <!-- Logo/Home -->
         <a class="navbar-brand" href="/">
-            <img src="/images/products/1.png" alt="HAVENZA" style="width:20%;" />
+            <img src="/images/products/1.png" alt="HAVENZA" class="havenza-logo" />
         </a>
 
         <!-- Toggler for mobile -->
-        <!-- In your NavMenu.razor or main layout component -->
-
-        <button class="navbar-toggler" type="button" @onclick="ToggleSidebar">
+        <button class="navbar-toggler" type="button" @onclick="ToggleSidebar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -22,7 +21,7 @@
             <div class="sidebar-overlay" @onclick="CloseSidebar"></div>
             <div class="sidebar">
                 <form class="sidebar-search mb-3">
-                    <input type="search" placeholder="Search..." />
+                    <input type="search" placeholder="Search..." aria-label="Search" />
                 </form>
                 <ul>
                     <li><NavLink href="/categories">Categories</NavLink></li>
@@ -30,19 +29,23 @@
                     <li><NavLink href="/library">Library</NavLink></li>
                     <li><NavLink href="/aboutcontact">About Us</NavLink></li>
                 </ul>
-                <!-- Auth/cart logic as needed -->
             </div>
         }
 
         <!-- Main Navigation -->
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <!-- Categories Dropdown -->
-                <li class="nav-item dropdown havenza-dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown">
+
+                <!-- Categories dropdown (dynamic) -->
+                <li class="nav-item dropdown havenza-dropdown"
+                    @onmouseenter='() => OpenDropdown("categories")'
+                    @onmouseleave="CloseDropdown">
+                    <a class="nav-link @(activeDropdown == "categories" ? "nav-link-active" : null)"
+                       href="#"
+                       @onclick:preventDefault>
                         Categories
                     </a>
-                    <ul class="dropdown-menu havenza-dropdown-menu" aria-labelledby="categoriesDropdown">
+                    <ul class="havenza-dropdown-menu">
                         @if (categories is null || !categories.Any())
                         {
                             <li class="dropdown-item disabled">No categories</li>
@@ -65,16 +68,22 @@
                 <li class="nav-item">
                     <NavLink class="nav-link" href="/shop">Shop</NavLink>
                 </li>
-                <!-- Library Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="libraryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                <!-- Library dropdown (static) -->
+                <li class="nav-item dropdown havenza-dropdown"
+                    @onmouseenter='() => OpenDropdown("library")'
+                    @onmouseleave="CloseDropdown">
+                    <a class="nav-link @(activeDropdown == "library" ? "nav-link-active" : null)"
+                       href="#"
+                       @onclick:preventDefault>
                         Library
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="libraryDropdown">
-                        <li><a class="dropdown-item" href="/blogs">Blogs</a></li>
-                        <li><a class="dropdown-item" href="/stories">Stories</a></li>
+                    <ul class="havenza-dropdown-menu">
+                        <li><NavLink class="dropdown-item" href="/blogs">Blogs</NavLink></li>
+                        <li><NavLink class="dropdown-item" href="/stories">Stories</NavLink></li>
                     </ul>
                 </li>
+
                 <!-- About -->
                 <li class="nav-item">
                     <NavLink class="nav-link" href="/aboutcontact">About Us</NavLink>
@@ -82,39 +91,48 @@
             </ul>
 
             <!-- Search + Auth/Cart Section (right aligned) -->
-            <form class="d-flex me-2 position-relative" role="search" @onfocusin="ExpandSearch" @onfocusout="CollapseSearch">
-                <input class="form-control me-2 search-box"
-                       type="search"
-                       placeholder="Search..."
-                       aria-label="Search"
-                       style="@_searchExpanded ? " width: 220px;" : "width: 120px; transition:width 0.25s;" ">
-                <button class="btn btn-outline-secondary" type="submit">
-                    <span class="bi bi-search"></span>
-                </button>
+            <form class="d-flex me-2 position-relative search-form" role="search">
+                <div class="search-wrapper @(_searchExpanded ? "search-open" : string.Empty)">
+                    @if (_searchExpanded)
+                    {
+                        <input class="form-control search-box"
+                               type="search"
+                               placeholder="Search..."
+                               aria-label="Search"
+                               @onblur="OnSearchBlur" />
+                    }
+
+                    <button type="button"
+                            class="search-toggle-btn"
+                            @onclick="ToggleSearch"
+                            aria-label="Toggle search">
+                        <MudIcon Icon="@Icons.Material.Filled.Search" />
+                    </button>
+                </div>
             </form>
+
+
             <!-- User/Auth, Cart -->
             <div class="d-flex align-items-center">
                 <AuthorizeView>
                     <Authorized>
-                        <NavLink class="nav-link" href="/account/manage">
+                        <NavLink class="nav-link" href="/account/manage" title="Account">
                             <span class="bi bi-person-circle"></span>
                         </NavLink>
-                        <NavLink class="nav-link" href="/cart">
-                            <span class="bi bi-cart"></span>
+                        <NavLink class="nav-link" href="/cart" title="Shopping Cart">
+                            <MudIcon Icon="@Icons.Material.Filled.ShoppingCart" Class="havenza-cart-icon" />
                         </NavLink>
-                        <form method="post" action="/account/logout" class="d-inline">
-                            <button type="submit" class="btn btn-link nav-link">
-                                Logout
-                            </button>
-                        </form>
+                        <button type="button" class="btn btn-link nav-link" @onclick="HandleLogout" title="Logout">
+                            Logout
+                        </button>
                     </Authorized>
                     <NotAuthorized>
                         <NavLink class="nav-link" href="/account/register">Register</NavLink>
-                        <NavLink class="nav-link" href="/account/login">
+                        <NavLink class="nav-link" href="/account/login" title="Login">
                             <span class="bi bi-person"></span> Login
                         </NavLink>
-                        <NavLink class="nav-link" href="/cart">
-                            <span class="bi bi-cart"></span>
+                        <NavLink class="nav-link" href="/cart" title="Shopping Cart">
+                            <MudIcon Icon="@Icons.Material.Filled.ShoppingCart" Class="havenza-cart-icon" />
                         </NavLink>
                     </NotAuthorized>
                 </AuthorizeView>
@@ -125,17 +143,28 @@
 
 @code {
     private bool sidebarOpen = false;
-    void ToggleSidebar() => sidebarOpen = !sidebarOpen;
-    void CloseSidebar() => sidebarOpen = false;
-    private bool _searchExpanded = false;
-
-    void ExpandSearch() => _searchExpanded = true;
-    void CollapseSearch() => _searchExpanded = false;
+    private string? activeDropdown; // "categories", "library", or null
 
     private IEnumerable<CategoryDto> categories = Enumerable.Empty<CategoryDto>();
 
+    void ToggleSidebar() => sidebarOpen = !sidebarOpen;
+    void CloseSidebar() => sidebarOpen = false;
+
+    void OpenDropdown(string name) => activeDropdown = name;
+    void CloseDropdown() => activeDropdown = null;
+
+    private void HandleLogout()
+        => Navigation.NavigateTo("/account/logout", forceLoad: true);
+
     protected override async Task OnInitializedAsync()
     {
-        categories = await categoriesService.GetCategoriesAsync();
+        categories = await CategoriesService.GetCategoriesAsync();
     }
+    private bool _searchExpanded;
+
+    private void ToggleSearch() => _searchExpanded = !_searchExpanded;
+
+    private void OnSearchBlur(FocusEventArgs _) => _searchExpanded = false;
+
+
 }

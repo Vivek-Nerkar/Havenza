@@ -1,27 +1,40 @@
 :root {
-    --color-tan: #E2A16F; /* Premium Tan */
-    --color-cream: #FFF0DD; /* Creamy Comfort */
-    --color-gray: #D1D3D4; /* Modern Gray */
-    --color-teal: #86B0BD; /* Ocean Teal */
+    --color-tan: #e2a16f; /* Premium Tan */
+    --color-cream: #fff0dd; /* Creamy Comfort */
+    --color-gray: #d1d3d4; /* Modern Gray */
+    --color-teal: #86b0bd; /* Ocean Teal */
     --color-white: #ffffff;
     --color-black: #333333;
     --color-nav-bg: var(--color-cream);
     --color-nav-border: var(--color-tan);
-    --color-nav-link: var(--color-black); /* Default link color: dark, modern */
-    --color-nav-link-hover: var(--color-teal); /* Bold tan when hovered */
-    --color-nav-link-grey: var(--color-gray); /* Modern grey for white backgrounds */
+    --color-nav-link: var(--color-black);
+    --color-nav-link-hover: var(--color-teal);
+    --color-nav-link-grey: var(--color-gray);
+}
+/*Logo*/
+.havenza-logo {
+    height: 50px; /* adjust to taste: 32–48px range */
+    width: auto; /* keep aspect ratio */
+    display: block;
+}
+.havenza-cart-icon {
+    font-size: 1.1rem; /* visible size */
+    margin-left: 0.25rem;
+    vertical-align: middle;
+    color: var(--color-black); /* same as nav text */
 }
 
 /* Layout Base */
-body, html {
+body,
+html {
     background-color: var(--color-cream);
     color: var(--color-black);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/*Navbar*/
+/* Navbar */
 .navbar {
     width: 100%;
     position: relative;
@@ -29,7 +42,7 @@ body, html {
     z-index: 10;
     background-color: var(--color-nav-bg) !important;
     border-bottom: 2px solid var(--color-nav-border);
-    box-shadow: 0 1px 6px rgba(226,161,111,0.04);
+    box-shadow: 0 1px 6px rgba(226, 161, 111, 0.04);
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -41,6 +54,7 @@ body, html {
     font-size: 1.3rem;
     display: flex;
     align-items: center;
+    padding: 0.5rem 0;
 }
 
 .navbar-nav {
@@ -57,45 +71,91 @@ body, html {
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 3px;
-    transition: color 0.17s, font-weight 0.17s;
+    transition: color 0.17s ease, background-color 0.17s ease;
+    cursor: pointer;
 }
 
     .nav-link:hover,
     .nav-link:focus {
         color: var(--color-nav-link-hover) !important;
         background: none !important;
-        font-weight: 500;
     }
 
-    .nav-link.white-bg {
-        color: var(--color-white) !important;
+/* underline when dropdown active */
+.nav-link-active {
+    border-bottom: 2px solid var(--color-teal);
+    padding-bottom: 6px;
+}
+
+.nav-link.white-bg {
+    color: var(--color-white) !important;
+}
+
+    .nav-link.white-bg:hover,
+    .nav-link.white-bg:focus {
+        color: var(--color-nav-link-grey) !important;
     }
 
-        .nav-link.white-bg:hover,
-        .nav-link.white-bg:focus {
-            color: var(--color-nav-link-grey) !important;
-        }
-
-.navbar .form-control, .navbar .nav-link, .navbar .btn {
+.navbar .form-control,
+.navbar .nav-link,
+.navbar .btn {
     margin-right: 0.5rem;
 }
 
-/*navbar items*/
-.nav-item.dropdown .dropdown-menu {
-    display: none;
+/* Custom dropdown for Categories / Library */
+.havenza-dropdown {
+    position: relative;
+}
+
+/* Base hidden state; box visually attached to label */
+.havenza-dropdown-menu {
+    position: absolute;
+    top: 100%; /* directly under trigger */
+    left: 0;
+    margin-top: 0; /* no gap so it feels attached */
+    display: block;
+    min-width: 120px; /* compact width */
     opacity: 0;
     transform: translateY(6px);
-    transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+    pointer-events: none;
+    transition: opacity 0.22s ease-out, transform 0.22s ease-out;
+    z-index: 1000;
+    background: var(--color-cream);
+    border: 1px solid var(--color-gray);
+    border-radius: 0 0 7px 7px; /* top edge aligns with label */
+    box-shadow: 0px 10px 34px -8px rgba(0, 0, 0, 0.16);
+    list-style: none;
+    padding: 6px 0;
 }
 
-/*Hover on nav-items*/
-.nav-item.dropdown:hover .dropdown-menu,
-.nav-item.dropdown:focus-within .dropdown-menu {
-    display: block;
+/* Show when hovering over li or while focused inside */
+.havenza-dropdown:hover .havenza-dropdown-menu,
+.havenza-dropdown:focus-within .havenza-dropdown-menu {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
+/* Items inside custom dropdown */
+.havenza-dropdown-menu .dropdown-item {
+    color: var(--color-black);
+    font-size: 1rem;
+    padding: 6px 16px;
+    background: none;
+    border-radius: 0;
+    transition: color 0.17s ease, background-color 0.17s ease;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+    .havenza-dropdown-menu .dropdown-item:hover,
+    .havenza-dropdown-menu .dropdown-item:focus {
+        color: var(--color-nav-link-hover) !important;
+        background: rgba(134, 176, 189, 0.1) !important;
+    }
+
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -104,13 +164,24 @@ body, html {
     max-width: 330px;
     height: 100vh;
     background: var(--color-cream);
-    box-shadow: 2px 0 22px rgba(0,0,0,0.13);
+    box-shadow: 2px 0 22px rgba(0, 0, 0, 0.13);
     z-index: 9999;
     padding: 2rem 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    overflow-y: auto;
 }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
 
 .sidebar-overlay {
     position: fixed;
@@ -118,23 +189,25 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(53,53,53,0.3);
+    background: rgba(53, 53, 53, 0.3);
     z-index: 9998;
 }
 
 @media (min-width: 992px) {
-    .sidebar, .sidebar-overlay {
+    .sidebar,
+    .sidebar-overlay {
         display: none !important;
     }
 }
 
+/* Default Bootstrap dropdowns, if used elsewhere */
 .dropdown-menu {
     background: var(--color-cream);
     border: 1px solid var(--color-gray);
     border-radius: 7px;
     min-width: 160px;
     transition: opacity 0.2s;
-    box-shadow: 0px 10px 34px -8px rgba(0,0,0,0.16);
+    box-shadow: 0px 10px 34px -8px rgba(0, 0, 0, 0.16);
     margin-top: 8px;
 }
 
@@ -144,48 +217,88 @@ body, html {
     padding: 9px 24px;
     background: none;
     border-radius: 3px;
-    transition: color 0.17s, font-weight 0.17s;
+    transition: color 0.17s ease, background-color 0.17s ease;
 }
 
     .dropdown-item:hover,
     .dropdown-item:focus {
         color: var(--color-nav-link-hover) !important;
-        font-weight: 700;
-        background: none !important;
+        background: rgba(134, 176, 189, 0.1) !important;
     }
 
-.form-control.search-box {
+/* SEARCH: icon button + expanding input */
+
+.search-form {
+    transition: all 0.25s ease;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    max-width: 260px; /* enough for expanded search */
+}
+
+/* input collapsed by default (not rendered when _searchExpanded=false) */
+.search-box {
     border: 1px solid var(--color-tan);
     background: var(--color-cream);
-    transition: width 0.25s;
-    width: 120px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-black);
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    border-radius: 999px;
+    transition: width 0.25s ease, opacity 0.25s ease, padding 0.25s ease;
 }
 
-    .form-control.search-box:focus {
-        width: 220px;
-        border-color: var(--color-teal);
-        box-shadow: 0 0 0 0.15rem var(--color-teal), 0 0 0 0.25rem var(--color-tan);
-    }
-
-.btn-outline-secondary {
-    color: var(--color-teal);
-    border-color: var(--color-teal);
-    background: var(--color-white);
-    transition: background 0.2s, border 0.2s;
+/* when wrapper has search-open (set via Blazor), show input */
+.search-wrapper.search-open .search-box {
+    width: 170px;
+    padding: 0.2rem 0.75rem;
+    opacity: 1;
 }
 
-    .btn-outline-secondary:hover {
-        color: var(--color-white);
+/* round icon button only (no teal pill by default) */
+.search-toggle-btn {
+    border-radius: 999px;
+    padding: 0.25rem 0.4rem;
+    border: 1px solid var(--color-tan);
+    background: transparent;
+    color: var(--color-black);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem; /* icon size */
+    line-height: 1;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+    .search-toggle-btn:hover {
         background: var(--color-teal);
+        color: var(--color-white);
+        border-color: var(--color-teal);
     }
 
+/* Button link styling for logout */
+.btn-link.nav-link {
+    padding: 8px 16px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .btn-link.nav-link:hover {
+        color: var(--color-nav-link-hover) !important;
+    }
+
+/* Main content (you can remove max-width if you want full width) */
 .main-content {
     max-width: 1440px;
     margin: 0 auto;
     padding: 2rem 2rem;
-    margin-top: 0; /* No extra margin required if navbar is static */
+    margin-top: 0;
 }
 
 @media (max-width: 992px) {
@@ -195,6 +308,10 @@ body, html {
 
     .navbar {
         padding: 0.5rem;
+    }
+
+    .search-form {
+        margin-right: 0.5rem !important;
     }
 }
 
