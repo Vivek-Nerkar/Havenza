@@ -17,6 +17,7 @@
     width: auto; /* keep aspect ratio */
     display: block;
 }
+
 .havenza-cart-icon {
     font-size: 1.1rem; /* visible size */
     margin-left: 0.25rem;
@@ -30,14 +31,16 @@ html {
     background-color: var(--color-cream);
     color: var(--color-black);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 0;
+    margin: 0 0px;
     padding: 0;
 }
-
+.page-container{
+    padding-top: 5%;
+}
 /* Navbar */
 .navbar {
     width: 100%;
-    position: relative;
+    position: fixed;
     margin-bottom: 0;
     z-index: 10;
     background-color: var(--color-nav-bg) !important;
@@ -293,14 +296,16 @@ html {
         color: var(--color-nav-link-hover) !important;
     }
 
-/* Main content (you can remove max-width if you want full width) */
+/* Main content (you can remove max-width if you want full width): Commented No need for now */
 .main-content {
-    max-width: 1440px;
+    /*max-width: 1440px;
     margin: 0 auto;
-    padding: 2rem 2rem;
-    margin-top: 0;
+    padding: 2rem 2rem;*/
+    margin-top: 10px;
 }
-
+.main{
+    padding-top: 5%;
+}
 @media (max-width: 992px) {
     .main-content {
         padding: 1rem;
