@@ -2,12 +2,13 @@ using Havenza.Application.Interfaces;
 using Havenza.Infrastructure;
 using Havenza.Infrastructure.Services;
 using Havenza.Web.Client.Pages;
+using Havenza.Web.Client.Services;
 using Havenza.Web.Components;
 using Havenza.Web.Components.Account;
 using Havenza.Web.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Havenza.Web.Client.Services;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,22 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+builder.Services.AddMudServices();   
+
+
+// using Havenza.Web.Client.Services;  // make sure this using is present at top
+
+var appBaseUrl = builder.Configuration.GetValue<string>("AppBaseUrl") ?? "http://localhost:5030";
+
+// Register a typed HttpClient for CategoriesService so server prerender injects one with BaseAddress
+builder.Services.AddHttpClient<Havenza.Web.Client.Services.CategoriesService>(client =>
+{
+    client.BaseAddress = new Uri(appBaseUrl);
+});
+
+// Ensure CategoriesService is registered
+builder.Services.AddScoped<Havenza.Web.Client.Services.CategoriesService>();
+
 
 var app = builder.Build();
 
