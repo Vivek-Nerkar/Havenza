@@ -1,22 +1,11 @@
 ﻿@inherits LayoutComponentBase
-
-<header>
+@using MudBlazor
+<MudLayout>
     <NavBar />
-</header>
-
-@* <div class="main-content"/>*@
-    <main class="page-container">
-        @Body
-    </main>
-
-    <footer>
-
-    </footer>
-
-
-
-<div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
-    <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
-</div>
+    <MudMainContent>
+        <div class="havenza-container" style="min-height: calc(100vh - 300px);">
+            @Body
+        </div>
+    </MudMainContent>
+    <Footer />
+</MudLayout>

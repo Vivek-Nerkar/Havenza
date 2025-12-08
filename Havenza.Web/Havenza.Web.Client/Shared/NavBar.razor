@@ -112,6 +112,7 @@
             </form>
 
 
+
             <!-- User/Auth, Cart -->
             <div class="d-flex align-items-center">
                 <AuthorizeView>
@@ -119,9 +120,7 @@
                         <NavLink class="nav-link" href="/account/manage" title="Account">
                             <span class="bi bi-person-circle"></span>
                         </NavLink>
-                        <NavLink class="nav-link" href="/cart" title="Shopping Cart">
-                            <MudIcon Icon="@Icons.Material.Filled.ShoppingCart" Class="havenza-cart-icon" />
-                        </NavLink>
+                        <MudIconButton Icon="@Icons.Material.Filled.ShoppingCart" Href="/cart" Color="Color.Inherit" />
                         <button type="button" class="btn btn-link nav-link" @onclick="HandleLogout" title="Logout">
                             Logout
                         </button>
@@ -131,9 +130,7 @@
                         <NavLink class="nav-link" href="/account/login" title="Login">
                             <span class="bi bi-person"></span> Login
                         </NavLink>
-                        <NavLink class="nav-link" href="/cart" title="Shopping Cart">
-                            <MudIcon Icon="@Icons.Material.Filled.ShoppingCart" Class="havenza-cart-icon" />
-                        </NavLink>
+                            <MudIconButton Icon="@Icons.Material.Filled.ShoppingCart" Href="/cart" Color="Color.Inherit" />
                     </NotAuthorized>
                 </AuthorizeView>
             </div>
